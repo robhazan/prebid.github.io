@@ -24,10 +24,12 @@ Maintainer: prebid.support@indexexchange.com
 
 ## Description
 
-This module connects publishers to Index Exchange's (IX) network of demand
-sources through Prebid.js. This module is GDPR and CCPA compliant.
+Publishers may access Index Exchange's (IX) network of demand
+sources through our Prebid.js and Prebid Server adapaters. Both of these modules are GDPR and CCPA compliant.
 
-It is compatible with both the older ad unit format where the `sizes` and
+### IX Prebid.js Adapter
+
+Our Prebid.js adapter is compatible with both the older ad unit format where the `sizes` and
 `mediaType` properties are placed at the top-level of the ad unit, and the newer
 format where this information is encapsulated within the `mediaTypes` object. We
 recommend that you use the newer format when possible as it will be better able
@@ -74,13 +76,22 @@ var adUnits = [{
 }];
 ```
 
-### Supported Media Types
+### Supported Media Types (Prebid.js)
 
 {: .table .table-bordered .table-striped }
 | Type   | Support |
 | ------ | ------- |
 | `Banner` | Fully supported for all IX approved sizes. |
 | `Video`  | Fully supported for all IX approved sizes. |
+| `Native` | Not supported. |
+
+### Supported Media Types (Prebid Server)
+
+{: .table .table-bordered .table-striped }
+| Type   | Support |
+| ------ | ------- |
+| `Banner` | Fully supported for all IX approved sizes. |
+| `Video`  | Not supported. |
 | `Native` | Not supported. |
 
 ## Bid Parameters
@@ -370,6 +381,34 @@ pbjs.setConfig({
 
 The timeout value must be a positive whole number in milliseconds.
 
+## IX Prebid Server Adapter
+
+Publishers who would like to retrieve IX demand via a Prebid Server instance can do so by adding IX to the list of bidders for a Prebid Server bid request, with a valid site ID. For example:
+
+```javascript
+"imp": [
+  {
+    "id": "test2",
+    "banner": {
+      "format": [
+        {
+          "w": 300,
+          "h": 600
+        }
+      ]
+    },
+    "ext": {
+      "ix": {
+        "siteId": "12345"
+      }
+    }
+  }
+]
+```
+
+### Important Prebid Server Note
+Any party operating their own hosted Prebid Server instances must reach out to IX (prebid.support@indexexchange.com) to receive approval and customized setup instructions. Please do not send Prebid Server requests without first contacting us -- you will not receive bid responses.
+
 ## Additional Information
 
 ### Bid Request Limit
@@ -402,7 +441,7 @@ unit we require the size to be explicitly stated.
 2. An ad unit may have sizes that IX does not support. By explicitly stating the
 size, you can choose not to have IX bid on certain sizes that are invalid.
 
-### How do I view IX's bid request in the network?
+### How can I view the bid request sent to IX by Prebid.js?
 
 In your browser of choice, create a new tab and open the developer tools. In
 developer tools, select the network tab. Then, navigate to a page where IX is
