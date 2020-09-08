@@ -374,7 +374,7 @@ such:
 ```javascript
 pbjs.setConfig({
     ix: {
-        timeout: 250
+        timeout: 50
     }
 });
 ```
