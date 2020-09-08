@@ -25,7 +25,7 @@ Maintainer: prebid.support@indexexchange.com
 ## Description
 
 Publishers may access Index Exchange's (IX) network of demand
-sources through our Prebid.js and Prebid Server adapaters. Both of these modules are GDPR and CCPA compliant.
+sources through our Prebid.js and Prebid Server adapters. Both of these modules are GDPR and CCPA compliant.
 
 ### IX Prebid.js Adapter
 
