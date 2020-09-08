@@ -35,7 +35,7 @@ format where this information is encapsulated within the `mediaTypes` object. We
 recommend that you use the newer format when possible as it will be better able
 to accommodate new feature additions.
 
-If a mix of properties from both formats are present within an ad unit, the
+If a mix of properties from both formats is present within an ad unit, the
 newer format's properties will take precedence.
 
 Here are examples of both formats.
@@ -333,12 +333,12 @@ gulp build --modules=bidderModules.json
 
 ## Setting First Party Data (FPD)
 
-FPD allows you to specify key-value pairs which will be passed as part of the
+FPD allows you to specify key-value pairs that are passed as part of the
 query string to IX for use in Private Marketplace Deals which rely on query
 string targeting for activation. For example, if a user is viewing a
 news-related page, you can pass on that information by sending `category=news`.
-Then in the IX Private Marketplace setup screens you can create Deals which
-activate only on pages which contain `category=news`. Please reach out to your
+Then in the IX Private Marketplace setup screens, you can create Deals which
+activate only on pages that contain `category=news`. Please reach out to your
 IX representative if you have any questions or need help setting this up.
 
 To include FPD in a bid request, it must be set before `pbjs.requestBids` is
@@ -445,5 +445,5 @@ size, you can choose not to have IX bid on certain sizes that are invalid.
 
 In your browser of choice, create a new tab and open the developer tools. In
 developer tools, select the network tab. Then, navigate to a page where IX is
-setup to bid. Now, in the network tab, search for requests to
+set up to bid. Now, in the network tab, search for requests to
 `casalemedia.com/cygnus`. These are the bid requests.
