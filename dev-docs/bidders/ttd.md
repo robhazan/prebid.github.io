@@ -34,6 +34,7 @@ Note: The Trade Desk Header Bidding adapter requires setup and approval before b
 ## Bid Params
 
 {: .table .table-bordered .table-striped }
+
 | Name | Scope | Description | Example | Type |
 | --- | --- | --- | --- | --- |
 | `supplySourceId` | required | The TTD-provided supply source name. | `'supplier'` | `String` |
