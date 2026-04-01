@@ -35,7 +35,7 @@ Note: The Trade Desk Header Bidding adapter requires setup and approval before b
 
 {: .table .table-bordered .table-striped }
 | Name | Scope | Description | Example | Type |
-| --- | --- | --- | --- | ---- |
+| --- | --- | --- | --- | --- |
 | `supplySourceId` | required | The TTD-provided supply source name. | `'supplier'` | `String` |
 | `publisherId` | required | The publisher ID. If there is a sellers.json, this should be the same as the seller_id in the sellers.json for the site being trafficked. If there is no sellers.json, this should be hardcoded to "1". | `'1427ab10f2e448057ed3b422'` | `String` |
 | `placementId` | optional | This field is optional if GPID is passed through the GPT module <https://docs.prebid.org/dev-docs/modules/gpt-pre-auction.html>. If that module isn't used, the GPID value should be passed in this field. | `'/1111/home#header'` | `String` |
@@ -49,7 +49,7 @@ The following banner parameters are supported:
 
 {: .table .table-bordered .table-striped }
 | Name | Scope | Description | Example | Type |
-| --- | --- | --- | --- | ---- |
+| --- | --- | --- | --- | --- |
 | `expdir` | optional | Directions in which the banner may expand. See "Expandable Direction" in the [OpenRTB 2.5 docs](https://www.iab.com/wp-content/uploads/2016/03/OpenRTB-API-Specification-Version-2-5-FINAL.pdf) for possible values. | `[1, 3]` | `Array[integer]` |
 
 ## `mediaTypes.banner` Parameters
