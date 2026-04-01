@@ -49,6 +49,7 @@ Note: The Trade Desk Header Bidding adapter requires setup and approval before b
 The following banner parameters are supported:
 
 {: .table .table-bordered .table-striped }
+
 | Name | Scope | Description | Example | Type |
 | --- | --- | --- | --- | --- |
 | `expdir` | optional | Directions in which the banner may expand. See "Expandable Direction" in the [OpenRTB 2.5 docs](https://www.iab.com/wp-content/uploads/2016/03/OpenRTB-API-Specification-Version-2-5-FINAL.pdf) for possible values. | `[1, 3]` | `Array[integer]` |
